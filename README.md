@@ -1,3 +1,13 @@
+#Git remote
 
-You can fill in the sections with the relevant details about your project. This template includes sections for a project title, description, features, installation instructions, usage instructions, contributing guidelines, and license information.
-You can fill in the sections with the relevant details about your project. This template includes sections for a project title, description, features, installation instructions, usage instructions, contributing guidelines, and license information.
+- git remote -v 
+- git remote rename origin training
+- git push -u training main
+
+# Visualize
+- git log
+
+# Branch
+- git branch -M main
+- git branch --list
+- git branch name && git checkout name
