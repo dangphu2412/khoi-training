@@ -13,17 +13,46 @@
 
       .red-color {
         color: red;
+        background-color: purple;
       }
 
       h1 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding-top: 60px;
+        padding-left: 30px;
+        padding-bottom: 60px;
         color: blue;
+        border-width: 10px;
+        border-style: solid;
+        border-color: pink;
+      }
+
+      #main-content {
+        color: black;
+      }
+
+      * {
+        color: green;
+      }
+
+      h1, h2, h3, h4, h5 {
+        color: red;
+      }
+
+      div p {
+        padding-top: 100px;
+      }
+
+      div > p {
+        padding-bottom: 100px;
       }
     </style>
   </head>
   <body>
     Hello moi nguoi
 
-    <h1 id="main-content">Cách tôi làm chủ html như thế nào?</h1>
+    <h1 id="main-content" class="red-color">Cách tôi làm chủ html như thế nào?</h1>
     <h2>Title2</h2>
     <h3>Title2</h3>
     <h4>Title2</h4>
@@ -33,6 +62,9 @@
       <p class="red-color">Content</p>
       <p>Content 2 <span>Hello content 3</span></p>
       <span>Content 3</span>
+      <section>
+        <p>Test Descendant</p>
+      </section>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae non rerum sunt similique velit nesciunt placeat aspernatur, provident commodi minima expedita, dolores nobis voluptas vel earum vero animi consequatur?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae non rerum sunt similique velit nesciunt placeat aspernatur, provident commodi minima expedita, dolores nobis voluptas vel earum vero animi consequatur?
