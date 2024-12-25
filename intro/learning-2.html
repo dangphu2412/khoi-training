@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git and CSS Practice Exercise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .box-model {
+      width: 300px;
+      height: 150px;
+      padding: 20px;
+      border: 10px solid black;
+      margin: 20px;
+      background-color: lightblue;
+    }
+
+    .box-model:hover {
+      background-color: lightcoral;
+      font-size: 24px;
+      width: 500px;
+      height: 200px;
+    }
+
+    /* CSS Selectors */
+    p {
+      color: #333;
+      /* Base rule */
+    }
+
+    .priority {
+      color: green;
+    }
+
+    #unique {
+      color: red;
+    }
+
+    /* Combinator Selectors */
+    div>p {
+      background-color: lightgreen;
+      /* Child combinator */
+    }
+
+    h2+p {
+      background-color: lightcoral;
+      /* Next sibling combinator */
+    }
+
+    h2~p {
+      background-color: lightyellow;
+      /* Subsequent sibling combinator */
+    }
+
+    /* Pseudo-classes */
+    ul li:first-child {
+      background-color: lightblue;
+    }
+
+    ul li:last-child {
+      background-color: lightpink;
+    }
+
+    ul li:nth-child(2) {
+      background-color: lightgray;
+    }
+
+    /* Pseudo-elements */
+    p::before {
+      content: \"\\2022 \\0020\";
+      /* Adds a bullet point */
+      color: gray;
+    }
+
+    p::first-line {
+      font-weight: bold;
+    }
+
+    /* Attribute Selectors */
+    a[href] {
+      background-color: lightyellow;
+    }
+
+    a[target=\"_blank\"] {
+      background-color: lightgreen;
+    }
+
+    span {
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Git and CSS Practice</h1>
+  </header>
+
+  <section>
+    <h2>Git Concepts</h2>
+    <p><strong>Working Directory:</strong> The current files you are working on in your project.</p>
+    <p><strong>Staging Area:</strong> A place where changes are added before committing.</p>
+    <p><strong>Repository:</strong> The place where all commits are stored, including the project history.</p>
+    <p><strong>Changeset:</strong> A set of changes made to the files, ready to be staged and committed.</p>
+    <img src="https://docs.gitopia.com/assets/images/git_workflow-9316513f375d1d73139a7c7d27d1212b.jpg" height="400" />
+  </section>
+
+  <section>
+    <h2>Git Remote and Branching</h2>
+    <ol>
+      <li>Initialize a Git repository using <code>git init</code>.</li>
+      <li>Connect to a remote repository: <code>git remote add origin &lt;url&gt;</code>.</li>
+      <li>Visualize branches with <code>git branch -v</code>.</li>
+      <li>Create a new branch: <code>git branch feature-branch</code>.</li>
+      <li>Switch branches: <code>git checkout feature-branch</code> or <code>git switch feature-branch</code>.</li>
+      <li>Change the remote name: <code>git remote rename origin new-remote</code>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>CSS Box Model</h2>
+    <div class="box-model">
+      This box demonstrates the box model with a background color, border, padding, and margin.
+    </div>
+  </section>
+
+  <section>
+    <h2>CSS Selectors</h2>
+    <p>This paragraph demonstrates a base rule.</p>
+    <p class="priority">This paragraph uses a class selector.</p>
+    <p id="unique">This paragraph uses an ID selector.</p>
+  </section>
+
+  <section>
+    <h2>Combinator Selectors</h2>
+    <div>
+      <span>This paragraph is a direct child of a div (Child combinator).</span>
+    </div>
+    <h2>Next Example</h2>
+    <p>This paragraph is the next sibling of an h2 (Next sibling combinator).</p>
+    <p>This paragraph is a subsequent sibling of an h2 (Subsequent sibling combinator).</p>
+  </section>
+
+  <section>
+    <h2>Pseudo-Class Selectors</h2>
+    <ul>
+      <li>First item (First child)</li>
+      <li>Second item (Nth child)</li>
+      <li>Last item (Last child)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pseudo-Element Selectors</h2>
+    <p>This paragraph demonstrates <code>::before</code> and <code>::first-line</code> pseudo-elements.</p>
+  </section>
+
+  <section>
+    <h2>Attribute Selectors</h2>
+    <a href="https://example.com">Visit Example</a><br>
+    <a href="https://example.com" target="_blank">Open in New Tab</a>
+  </section>
+
+  <footer>
+    <p>Practice both Git and CSS using this example page. Experiment with the concepts outlined here!</p>
+  </footer>
+</body>
+
+</html>
