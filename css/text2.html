@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Text Practice Page 2</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h2 {
+      line-height: 1.1;
+      font-variant: small-caps;
+    }
+
+    .center {
+      text-align: center;
+      color: green;
+    }
+
+    section {
+      border: 1px solid;
+      max-width: 760px;
+      min-width: 560px;
+      margin: 0 auto;
+      padding: 12px;
+      box-shadow: 1px 0 10px 0;
+    }
+
+    .combinator-container {
+      background-color: lightgreen;
+      padding: 8px;
+    }
+
+    .combinator-container p {
+      background-color: lightblue;
+      padding: 8px;
+    }
+
+    .center-siblings~p {
+      text-align: center;
+    }
+
+    .combinartor-child>label {
+      background-color: lightcoral;
+    }
+
+    .combinartor-child>div {
+      padding-left: 20px
+    }
+
+    .first-line::first-line {
+      font-variant: small-caps;
+      color: red;
+    }
+
+    .nav>a {
+      text-decoration: overline;
+      color: blue;
+    }
+
+    .nav>a::after {
+      content: " | ";
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="center">CSS Text Practice Page 2</h1>
+
+  <section id="1">
+    <h2>Practice on combinator css - Using font-variant</h2>
+    <div class="combinator-container">
+      <h3><q>h3.combinator-container</q> is 1 way how we call css selector with class in css</h3>
+      <p>This p is staying inside of a div which bound the h3.combinator-container</p>
+    </div>
+
+    <div class="combinartor-siblings">
+      <h3 class="center-siblings">This is h3 with <q><i>h3.center-siblings</i></q></h3>
+      <p>This text is styled because of staying next to <b>h3</b> with class <q><i>center-siblings</i></q>.</p>
+      <i>
+        <quote>Please use <b>next siblings combinator</b></quote>
+      </i>
+
+      <div class="combinartor-child">
+        <h3>This is a div with class .combinator-child</h3>
+
+        <label>This is a <code>label</code> html</label>
+        <input type="text" placeholder="This is a placeholder">
+
+        <div>
+          <label>This is a nested label tag html but not be css by the .combinator-child class</label>
+          <input type="text" placeholder="This is a placeholder">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Practice on pseudo element</h2>
+
+    <div class="first-line">
+      <p>Option 1: This is styled by first-line using pseudo element</p>
+      <p>Option 2 not effected</p>
+      <p>Option 3 not effected</p>
+    </div>
+
+    <div>
+      <h3>This nav tag with items of a tag</h3>
+      <caption>Using pseudo element ::after to add separator</caption>
+      <p>Take a look at text-decoration property of css</p>
+
+      <nav class="nav">
+        <a href="#1">HTML</a>
+        <a href="/css/">CSS</a>
+        <a href="/js/">JavaScript</a>
+        <a href="/python/">Python</a>
+      </nav>
+
+      <textarea>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, reprehenderit facere! Quas, consequuntur sunt illum sit, voluptates dolore at repellendus aut nihil corporis distinctio, beatae doloribus eveniet deserunt ab aspernatur.
+      </textarea>
+    </div>
+  </section>
+</body>
+
+</html>
